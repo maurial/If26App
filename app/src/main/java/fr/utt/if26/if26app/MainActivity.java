@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText username, password;
+    //private EditText username, password;
 
     private static Button buttonGo;
 
