@@ -19,50 +19,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        username = (EditText)findViewById(R.id.usernameTextField);
-        password = (EditText)findViewById(R.id.passwordTextField);
+        //username = (EditText)findViewById(R.id.usernameTextField);
+        //password = (EditText)findViewById(R.id.passwordTextField);
 
         buttonGo = (Button)findViewById(R.id.goButton);
 
-        //OnClickButtonListener(username.getText().toString(), password.getText().toString());
+        OnClickButtonListener();
 
-        buttonGo.setOnClickListener(new View.OnClickListener(){
+        //buttonGo.setOnClickListener(new View.OnClickListener(){
+        //            public void onClick(View v){
+        //                Validate(username.getText().toString(), password.getText().toString());
+        //            }
+               // }
+        //);
+
+    }
+
+    //public void Validate(String user, String pass){
+    //    if((user.equals("admin")) && (pass.equals("12345"))){
+      //      Intent intent = new Intent("fr.utt.if26.if26app.Main2Activity");
+     //       startActivity(intent);
+     //       username.setText("");
+      //      password.setText("");
+      //  }
+      //  else{
+       //     Toast.makeText(MainActivity.this, "Nom d'utilisateur ou mot de passe incorrect", Toast.LENGTH_LONG).show();
+       //     username.setText("");
+       //     password.setText("");
+      //  }
+   // }
+
+    public void OnClickButtonListener(){
+        buttonGo.setOnClickListener(
+                new View.OnClickListener(){
                     public void onClick(View v){
-                        Validate(username.getText().toString(), password.getText().toString());
+                        Intent intent = new Intent("fr.utt.if26.if26app.Main2Activity");
+                        startActivity(intent);
                     }
                 }
         );
-
     }
-
-    public void Validate(String user, String pass){
-        if((user.equals("admin")) && (pass.equals("12345"))){
-            Intent intent = new Intent("fr.utt.if26.if26app.Main2Activity");
-            startActivity(intent);
-            username.setText("");
-            password.setText("");
-        }
-        else{
-            Toast.makeText(MainActivity.this, "Nom d'utilisateur ou mot de passe incorrect", Toast.LENGTH_LONG).show();
-            username.setText("");
-            password.setText("");
-        }
-    }
-
-    //public void OnClickButtonListener(final String user, final String pass){
-    //    buttonGo.setOnClickListener(
-     //           new View.OnClickListener(){
-     //               public void onClick(View v){
-     //                   if((user.equals("admin")) && (pass.equals("12345"))){
-      //                      Intent intent = new Intent("fr.utt.if26.if26app.Main2Activity");
-         //                   startActivity(intent);
-            //            }
-              //          else{
-                //            Toast.makeText(MainActivity.this, "Nom d'utilisateur ou mot de passe incorrect", Toast.LENGTH_LONG).show();
-                  //      }
-            //        }
-           //     }
-        //);
-   // }
 
 }

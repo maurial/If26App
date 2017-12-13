@@ -85,8 +85,8 @@
         android:layout_x="16dp"
         android:layout_y="378dp"
         android:background="#0D47A1"
-        android:textColor="#FFFFFF"
-        android:text="Mettre à jour" />
+        android:text="Modifier"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/viewButton"
